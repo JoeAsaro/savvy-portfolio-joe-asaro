@@ -1,0 +1,24 @@
+{
+  "name": "JoeAsaro",
+  "version": "1.0.0",
+  "description": "Is a normal human being ###### thinking human thoughts ~~ignore him.~~",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melkortheslumpgod/savvy-portfolio-joe-asaro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Melkortheslumpgod/savvy-portfolio-joe-asaro/issues"
+  },
+  "homepage": "https://github.com/Melkortheslumpgod/savvy-portfolio-joe-asaro#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "parcel-bundler": "^1.10.3"
+  }
+}

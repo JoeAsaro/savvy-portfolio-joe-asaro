@@ -1,7 +1,7 @@
 
 body {
     background: linear-gradient(to right, #0b0b0b, #342219);
-    color:blanchedalmond);
+    color:blanchedalmond;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -26,7 +26,7 @@ img {
     display: block;
     margin: 0 auto;
     padding: 0 0 0 10em;
-    border: 6px;`
+    border: 6px;
     border-style: double;
     background: linear-gradient(to bottom, #0c0c0c, #121212);
     width: 70%;
@@ -34,13 +34,26 @@ img {
 }
 
 .brand {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 90%;
     color: rosybrown;
+    line-height: 85%
 }
 .container {
     margin: 0 auto;
     max-width: 900px;
     width: 90%;
-    background-color: rgb(255, 203, 173)
+    background-color: transparent;
+
+}
+div.container {
+    background-color: pink;
+}
+
+.max {
+    text-align-last: center;
+    font-size: 12em;
 }
 
 #middle {
@@ -48,15 +61,39 @@ img {
     font-style: normal;
 }
 #navigation { 
-    background-color: rgb(207, 181, 131);
+    background: linear-gradient(to right, pink, purple);
 
 }
+#navigation li:first :first-child {
+    background: linear-gradient(to bottom, red, darkgrey);
+    border: chocolate;
+
+}
+#navigation > ul > li {
+    display: inline;}
+
+#navigation > ul > li:hover {
+    background-color: lightcyan
+}
+
+}
+#content li:hover {
+    font-size: 140%;
+    background-color: limegreen;
+}
 #header {
-    background-color :rgb(126, 83, 14)
+    background-color :rgb(126, 83, 14);
     max-width: 900px;
     width: 90%;
     margin: 0 auto;
 
+}
+#navigation > ul > li { 
+    color: lightgoldenrodyellow;
+}
+#header > h1,
+#header > h2 {
+    color: lightblue;
 }
 #content { 
     background-color: rgb(207, 181, 131);
@@ -64,6 +101,6 @@ img {
 
 }
 #footer {
-    background-color: khaki)
+    background-color: khaki;
 
 }

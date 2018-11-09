@@ -1,10 +1,14 @@
-
 body {
-    background: linear-gradient(to right, #0b0b0b, #342219);
-    color:blanchedalmond;
+    background: linear-gradient(to top, #0b0b0b, #b02727c7);
+    color: blanchedalmond;
     font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+  
 }
-
+hr {
+    width: 90%;
+    max-width: 800px;
+}
 h1 {
     font-size: 5em;
     font-family: Arial, Helvetica, sans-serif;
@@ -25,11 +29,11 @@ ol {
 img {
     display: block;
     margin: 0 auto;
-    padding: 0 0 0 10em;
+    padding: 0 0 0 17em;
     border: 6px;
     border-style: double;
-    background: linear-gradient(to bottom, #0c0c0c, #121212);
-    width: 70%;
+    background: linear-gradient(to top, rosybrown, #90518894);
+    width: 90%;
     max-width: 400px;
 }
 
@@ -37,16 +41,22 @@ img {
     margin: 0 auto;
     max-width: 900px;
     width: 90%;
-    color: rosybrown;
-    line-height: 85%
+    
+    line-height: 85%;
 }
-.container {
-    margin: 0 auto;
-    max-width: 900px;
-    width: 90%;
-    background-color: transparent;
+.brand h1 {
+    letter-spacing: 0;
+    background:linear-gradient(to right, pink, rosybrown);
 
 }
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 90%;
+    background-color: transparent;
+}
+
 div.container {
     background-color: pink;
 }
@@ -60,47 +70,74 @@ div.container {
     font-size: 1em;
     font-style: normal;
 }
-#navigation { 
+
+#navigation {
     background: linear-gradient(to right, pink, purple);
+    font-size: 120%;
+    position: fixed;
+    width: 85vw;
+    top: 0;
+    left: 7vw;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1vw;
+    
+}
+.dropdown {
+    background: linear-gradient(to bottom, pink, rosybrown);
+}
+
+#navigation .dropdown {
+
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 3vw;
 
 }
-#navigation li:first :first-child {
-    background: linear-gradient(to bottom, red, darkgrey);
-    border: chocolate;
+
+#navigation a:hover + .dropdown,
+#navigation a + .dropdown:hover {
+    display: block;
 
 }
+
 #navigation > ul > li {
-    display: inline;}
+    display: inline;
+    position: relative;
+    padding: 1vw;
+    
+}
 
 #navigation > ul > li:hover {
-    background-color: lightcyan
+    background:linear-gradient(to right, rosybrown, lightcyan);
 }
 
-}
 #content li:hover {
     font-size: 140%;
     background-color: limegreen;
 }
-#header {
-    background-color :rgb(126, 83, 14);
-    max-width: 900px;
-    width: 90%;
-    margin: 0 auto;
 
+#header { /*
+    max-width: 900px;
+    width: 90%; */ 
+    margin: 0 auto;  
 }
-#navigation > ul > li { 
+
+#navigation > ul > li {
     color: lightgoldenrodyellow;
 }
-#header > h1,
-#header > h2 {
+
+#header > h1, #header > h2 {
     color: lightblue;
 }
-#content { 
-    background-color: rgb(207, 181, 131);
-    padding: 20px;
 
+#content {
+    /*   background-color: rgb(207, 181, 131);
+ */
+    padding: 20px;
 }
+
 #footer {
     background-color: khaki;
-
 }

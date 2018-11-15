@@ -1,40 +1,57 @@
 body {
-    background: linear-gradient(to top, #0b0b0b, #b02727c7);
+    background: linear-gradient(to right, pink, pink, rosybrown);
     color: blanchedalmond;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
-  
+    display: grid;
+    min-height: 100vh;
+     grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "navigation"
+        "header"
+        "content"
+        "footer";
 }
 hr {
     width: 90%;
     max-width: 800px;
 }
+f
+
+h3 {
+    font-family: font-family: 'IM Fell English';
+}
+
 h1 {
     font-size: 5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Eczar', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     color: tan;
 }
 
 h2 {
-    color: tomato;
+    color: palevioletred;
     font-style: italic
 }
 
 ol {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Eczar', Arial, Helvetica, sans-serif;
+    font-size: 150%;
     font-style: oblique;
 }
 
 img {
     display: block;
-    margin: 0 auto;
-    padding: 0 0 0 17em;
+    border-radius: 50%;
+    /*
     border: 6px;
     border-style: double;
     background: linear-gradient(to top, rosybrown, #90518894);
     width: 90%;
+    */
+    min-width: 20%;
     max-width: 400px;
+    margin: 0 auto;
 }
 
 .brand {
@@ -45,16 +62,14 @@ img {
     line-height: 85%;
 }
 .brand h1 {
-    letter-spacing: 0;
-    background:linear-gradient(to right, pink, rosybrown);
+    letter-spacing: 0vw;/*
+    background:linear-gradient(to right, pink, rosybrown);*/
 
 }
 
 .container {
     margin: 0 auto;
-    max-width: 600px;
-    width: 90%;
-    background-color: transparent;
+    padding: 0 auto;
 }
 
 div.container {
@@ -62,8 +77,28 @@ div.container {
 }
 
 .max {
-    text-align-last: center;
+    
     font-size: 12em;
+}
+
+/* unvisited link */
+a:link {
+    color: azure;
+}
+
+/* visited link */
+a:visited {
+    color: lavenderblush;
+}
+
+/* mouse over link */
+a:hover {
+    color: cornsilk;
+}
+
+/* selected link */
+a:active {
+    color: floralwhite;
 }
 
 #middle {
@@ -72,16 +107,13 @@ div.container {
 }
 
 #navigation {
-    background: linear-gradient(to right, pink, purple);
+    background: linear-gradient(to left, pink, rosybrown);
     font-size: 120%;
-    position: fixed;
-    width: 85vw;
-    top: 0;
-    left: 7vw;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Eczar', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1vw;
-    
+    position: sticky;
+    top: 0;
+    grid-area: navigation;
 }
 .dropdown {
     background: linear-gradient(to bottom, pink, rosybrown);
@@ -102,10 +134,54 @@ div.container {
 
 }
 
+@media (min-width: 750px) {
+    body {
+        grid-template-columns: 13vw auto;
+        grid-template-rows: min-content auto min-content;
+        grid-template-areas:
+            "navigation header"
+            "navigation content"
+            "navigation footer";
+
+       /* background: linear-gradient(to top, pink, pink, rosybrown); */
+    }
+/*
+    #navigation {
+        background: linear-gradient(to bottom, pink, rosybrown);
+    }
+*/
+    #navigation > ul {
+        flex-direction: column;
+    }
+    #navigation .dropdown {
+
+        position: absolute;
+        display: none;
+        left: 3vw;
+        top: 2.5vw;
+    
+    }
+    
+    #navigation a:hover + .dropdown,
+    #navigation a + .dropdown:hover {
+        display: block;
+    
+    }
+}
+
+#navigation > ul {
+    align-items: center;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
 #navigation > ul > li {
     display: inline;
     position: relative;
-    padding: 1vw;
+    margin: 10px;
     
 }
 
@@ -121,7 +197,8 @@ div.container {
 #header { /*
     max-width: 900px;
     width: 90%; */ 
-    margin: 0 auto;  
+    margin: 3vw auto;  
+    grid-area: header;
 }
 
 #navigation > ul > li {
@@ -129,15 +206,19 @@ div.container {
 }
 
 #header > h1, #header > h2 {
-    color: lightblue;
+    color: rosybrown;
 }
 
 #content {
     /*   background-color: rgb(207, 181, 131);
  */
     padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    grid-area: content;
 }
 
 #footer {
-    background-color: khaki;
+    background-color: transparent;
+    grid-area: footer;
 }

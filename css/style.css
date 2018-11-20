@@ -73,7 +73,7 @@ img {
 }
 
 div.container {
-    background-color: pink;
+    background:linear-gradient(to right, pink, pink, rosybrown); */;
 }
 
 .max {

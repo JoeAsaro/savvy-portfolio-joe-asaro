@@ -41,17 +41,21 @@ ol {
 }
 
 img {
-    display: block;
-    border-radius: 50%;
+  
+    border-radius: 50% 50% 0 0;
+    padding: 2.5vh 3vw;;
+    margin: 1vh auto;
+    background: linear-gradient(to left, pink, rosybrown);
     /*
-    border: 6px;
+    border: 2vw;
     border-style: double;
-    background: linear-gradient(to top, rosybrown, #90518894);
+    border-block-start-color: whitesmoke;
+    border-bottom-color: ivory;
     width: 90%;
-    */
     min-width: 20%;
     max-width: 400px;
     margin: 0 auto;
+    */  
 }
 
 .brand {
@@ -69,17 +73,13 @@ img {
 
 .container {
     margin: 0 auto;
-    padding: 0 auto;
+    padding: 2px 3px;
 }
 
 div.container {
     background:linear-gradient(to right, pink, pink, rosybrown); */;
 }
 
-.max {
-    
-    font-size: 12em;
-}
 
 /* unvisited link */
 a:link {
@@ -111,6 +111,7 @@ a:active {
     font-size: 120%;
     font-family: 'Eczar', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+    padding: 1vh auto auto 2vw;
     position: sticky;
     top: 0;
     grid-area: navigation;
@@ -186,12 +187,12 @@ a:active {
 }
 
 #navigation > ul > li:hover {
-    background:linear-gradient(to right, rosybrown, lightcyan);
+    background-color:lightcoral;
 }
 
 #content li:hover {
     font-size: 140%;
-    background-color: limegreen;
+    background-color:lightsalmon;
 }
 
 #header { /*
@@ -216,6 +217,15 @@ a:active {
     max-width: 400px;
     margin: 0 auto;
     grid-area: content;
+}
+.column {
+    display: flex; 
+    height: 2000px;
+    flex-flow: column wrap;
+   /*  
+    justify-content: space-evenly; */
+    align-items: flex-end;
+
 }
 
 #footer {

@@ -1,4 +1,8 @@
-var userName = prompt('What is your name?');
+var userName = prompt('What is your name?') || 'Anonymous User';
+
+var title = document.querySelector('h1');
+
+
 
 var greet = function greet() {
     if (!userName) {
@@ -6,7 +10,7 @@ var greet = function greet() {
 
         greet();
     } else {
-        alert('Hello ' + userName);
+        title.textContent = '💾 ' + userName + ' 🐀';
     }
 };
 

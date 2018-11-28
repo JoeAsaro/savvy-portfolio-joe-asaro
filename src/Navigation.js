@@ -1,4 +1,5 @@
-export default `
+export default function Havigation(){
+    return `
 <div id="navigation">
 <ul class="container">
     <li><a href="./blog">Blog</a></li>
@@ -12,4 +13,5 @@ export default `
     </li>
 </ul>
 </div>
-`
+`;
+}

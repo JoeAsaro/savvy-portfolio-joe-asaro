@@ -1,4 +1,5 @@
-export default `
+export default function Content(){
+    return `
 <div class="container">
 <p>Joe is a normal human being</p>
 <h2 class="brand">Boy Oh Gee Wow this internet is a wild new yonder.</h2>
@@ -26,4 +27,5 @@ alt="cute boy">
             <hr>
     
         </div>
-`
+`;
+}

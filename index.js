@@ -1,28 +1,20 @@
 import Content from './src/Content';
 import Footer from './src/Footer';
-import Navigation from './src/Navigation';
+import greet from './src/Greeting';
 import Header from './src/Header';
+import Navigation from './src/Navigation';
+
+var state = {
+    'title': 'Hello'
+};
+
 
 document.querySelector('#root').innerHTML = `
-    ${Navigation}
-    ${Header}
-    ${Content}
-    ${Footer}
+    ${Navigation(state)}
+    ${Header(state)}
+    ${Content(state)}
+    ${Footer(state)}
 `;
 
-// var userName = prompt('What is your name?') || 'Anonymous User';
+greet();
 
-// var title = document.querySelector('h1');
-
-// var greet = function greet(){
-//    if(!userName){
-//        userName = prompt('Whats is your name, for real this time?');
-//
-//        greet();
-//    }
-// else{
-//        title.textContent = '💾 ' + userName + ' 🐀';
-//    }
-//  };
-
-// greet();

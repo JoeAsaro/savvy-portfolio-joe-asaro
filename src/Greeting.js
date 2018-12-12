@@ -10,6 +10,6 @@ export default function greet(){
     }
 
     else{
-        title.innerHTML += `,  ${userName}`;
+        title.textContent += `,  ${userName}`;
     }
 }

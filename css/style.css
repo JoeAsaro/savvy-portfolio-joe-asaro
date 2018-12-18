@@ -160,10 +160,25 @@ a:active {
 #content {
     /*   background-color: rgb(207, 181, 131);
  */ 
-    margin: 0;
-    grid-area: content;
+ width: 75vw;
+ margin: auto;
+ grid-area: content;
 }
 
+    /* #form {
+        
+    } */
+.post{
+    background: linear-gradient(to left, pink, rosybrown);
+    color: rosybrown;
+}
+
+#content > span {
+    width: 507px;
+    padding: 0 auto;
+    margin: 0 auto;
+
+}
 
 .arches { 
     display: flex;
@@ -174,6 +189,7 @@ a:active {
     justify-content: flex-start;
     /* align-content: space-between; */
     height: 100%;
+    background: none;
 }
 .arches > div {
     display:flex;

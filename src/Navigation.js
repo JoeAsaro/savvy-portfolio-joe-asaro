@@ -1,29 +1,25 @@
 import { capitalize } from 'lodash';
-function buildLinks(links){
-    var list = '';
-    var link = '';
+function buildLink(link){
+    var href = '';
+    
+    if(link !== 'home'){
+        href = link;
+    }
 
-    for(let i = 0; i < links.length; i++){
-        if(links[i] !== 'home'){
-            link = links[i];
-        }
-
-        list += `    
+    return `    
           <li>
-            <a href="/${links[i]}" data-navigo>${capitalize(links[i])}</a>
+            <a href="/${href}" data-navigo>
+             ${capitalize(link)}
+            </a>
           </li>
         `;
-    }
-    // eslint-disable-next-line indent
-/* console.log(list); */
-
-    return list;
 }
+
 export default function Navagation(state){
     return `
      <div id="navigation">
         <ul class="container">
-            ${buildLinks(state[state.active].links)}
+            ${state[state.active].links.map(buildLink).join('')}
         <ul class="dropdown">
             <li>⛓⛓⛓⛓</li>
             <li>🐀🐁🐀🐐</li>

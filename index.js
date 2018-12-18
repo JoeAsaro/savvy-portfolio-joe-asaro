@@ -6,8 +6,10 @@ import Navigation from './src/Navigation';
 import Navigo from 'navigo';
 
 var router = new Navigo(window.location.origin);
+var root = document.querySelector('#root');
 
 var State = {
+    'posts': [],
     'active': 'home',
     'home': {
         'title': 'hi' ,
@@ -27,12 +29,34 @@ var State = {
     }
 };
 
-var root = document.querySelector('#root');
+class Store{
+    constructor(state){
+        this.listener = () => {};
+        this.state = state;
+    }
+
+    dispach(reducer){
+        this.state = reducer(this.state);
+        
+        this.listener(this.state);
+        render(this.state); // eslint-disable-line
+    }
+    addListener(listener){
+        this.listener = listener;
+
+}
+}
+
+var store = new Store(State); // eslint-disable-line
 
 function handleNavigation(params){
-    State.active = params.page;
+    store.dispach((state) => {
+        state.active = params.page;
+
+        return state;
+    });
+    render(State); // eslint-disable-line
 }
-render(State); // eslint-dissable-line
     
 function render(state){
     root.innerHTML = `
@@ -47,10 +71,15 @@ ${Footer(state)}
     router.updatePageLinks();
 }
 
-
-/* render(State); */
-
 router
     .on('/:page', handleNavigation)
-   /*  .on('/', () => handleNavagation({ 'page': 'home' })) */
+    .on('/', () => handleNavigation({ 'page': 'home' }))
     .resolve();
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => response.json())
+    .then((posts) => {
+        State.posts = posts;
+
+        render(State);
+    });

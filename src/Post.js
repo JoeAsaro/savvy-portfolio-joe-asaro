@@ -1,8 +1,8 @@
 export default function Post(post){
     return `
     <div class="post">
-    <h3>${post.id}. ${post.title}</h3>
-    <p>${post.body}</p>
+    <h3>${post.title}</h3>
+    <img src="${post.url}" width="150px">
     </div>
     `;
 }

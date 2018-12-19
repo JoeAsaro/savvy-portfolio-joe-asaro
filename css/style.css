@@ -59,6 +59,9 @@ ol {
 
 div.container {
     background:linear-gradient(to right, pink, pink, rosybrown);
+    -webkit-columns: 300px 2;
+   -moz-columns: 300px 2;
+        columns: 300px 2;
 }
 
 
@@ -165,13 +168,20 @@ a:active {
  grid-area: content;
 }
 
-    /* #form {
-        
-    } */
+
 .post{
     background: linear-gradient(to left, pink, rosybrown);
-    color: rosybrown;
+    color: antiquewhite;
+    margin: 3vh 2vw;
+    padding: 1vh 1vw;
+    float: left;
+    display: block;
 }
+
+.post > img {
+
+    padding: 1vh 1vw;
+  }
 
 #content > span {
     width: 507px;

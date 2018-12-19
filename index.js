@@ -43,8 +43,7 @@ class Store{
     }
     addListener(listener){
         this.listener = listener;
-
-}
+    }
 }
 
 var store = new Store(State); // eslint-disable-line
@@ -76,10 +75,10 @@ router
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .resolve();
 
-fetch('https://jsonplaceholder.typicode.com/posts')
+fetch('https://jsonplaceholder.typicode.com/photos')
     .then((response) => response.json())
-    .then((posts) => {
-        State.posts = posts;
+    .then((photos) => {
+        State.posts = photos;
 
         render(State);
     });

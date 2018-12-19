@@ -25,6 +25,10 @@ export default function Navagation(state){
             <li>🐀🐁🐀🐐</li>
             <li>⛓⛓⛓⛓⛓</li>
         </ul>
+       
+        <li><a href="https://www.instagram.com/joeyfromamerica/"><i class="fab fa-instagram"></i>instagram</a></li>
+        <li><a href="https://github.com/joeasaro"><i class="fab fa-github-alt"></i>GitHub</a></li>
+        <li><a href="www.linkedin.com/in/joeasaro"><i class="fab fa-linkedin"></i>Linkedin</a></li>
     </li>
 </ul>
 </div>

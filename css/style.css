@@ -58,7 +58,6 @@ ol {
 }
 
 div.container {
-    background:linear-gradient(to right, pink, pink, rosybrown);
     -webkit-columns: 300px 2;
    -moz-columns: 300px 2;
         columns: 300px 2;
@@ -93,13 +92,14 @@ a:active {
 #navigation {
     background: linear-gradient(to left, pink, rosybrown);
     font-size: 120%;
-    font-family: 'Eczar', Arial, Helvetica, sans-serif;
+    font-family: 'Vollkorn SC', 'Coustard', serif;
     text-transform: uppercase;
     padding: 1vh auto auto 2vw;
     position: sticky;
     top: 0;
     grid-area: navigation;
 }
+
 .dropdown {
     background: linear-gradient(to bottom, pink, rosybrown);
 }
@@ -172,15 +172,31 @@ a:active {
 .post{
     background: linear-gradient(to left, pink, rosybrown);
     color: antiquewhite;
-    margin: 3vh 2vw;
-    padding: 1vh 1vw;
-    float: left;
-    display: block;
+    margin: 0 0 1vh 0;
+    padding: 2vh 1vw;
+    height: 160px;
+    display: flex;
+    
+}
+.post > h3 {
+    margin: 0 0;
+    padding: 0 1vw;
+    flex: 1;
+}
+
+.post > h1{
+    flex: 1;
+    font-family: 'Vollkorn SC', serif;
+    color: rosybrown;
 }
 
 .post > img {
-
-    padding: 1vh 1vw;
+    
+    float: right;
+    flex: 1;
+    height: 150px;
+    width: 150px;
+    border-radius: 0 50% 0 0;
   }
 
 #content > span {
@@ -236,16 +252,8 @@ span {
     grid-area: footer;
 }
 
-@media screen and (min-width:700px) and (max-width: 900px       ){
-    .arches { 
-        height: 450vh;
 
-    }
-
-} 
-
-
-@media screen and (min-width: 777px) {
+@media screen and (min-width: 700px) {
     #root {
         grid-template-columns: 13vw auto;
         grid-template-rows: min-content auto min-content;
@@ -254,13 +262,14 @@ span {
             "navigation content"
             "navigation footer";
 
-       /* background: linear-gradient(to top, pink, pink, rosybrown); */
-    }
-/*
+    }   
     #navigation {
-        background: linear-gradient(to bottom, pink, rosybrown);
+        height: 100vh;
+        display: flex;
     }
-*/
+   .sites {
+            margin-left: auto;
+    }
     #navigation > ul {
         flex-direction: column;
     }

@@ -120,19 +120,16 @@ a:active {
 }
 
 
-#navigation > ul {
-    align-items: center;    
+#navigation > ul {  
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 0;
 }
 
 #navigation > ul > li {
     display: inline;
     position: relative;
-    margin: 10px;
+    margin: 0 10px;
     
 }
 
@@ -140,9 +137,19 @@ a:active {
     background-color:lightcoral;
 }
 
+.sites {
+    list-style-type: none;
+    padding: 0;
+}
+
 #content li:hover {
     /* font-size: 140%; */
     background-color:lightsalmon;
+}
+
+.flex {
+    display:none;
+
 }
 
 #header { /*
@@ -173,31 +180,49 @@ a:active {
     background: linear-gradient(to left, pink, rosybrown);
     color: antiquewhite;
     margin: 0 0 1vh 0;
-    padding: 2vh 1vw;
-    height: 160px;
+    padding: 0 1vw 0 ;
     display: flex;
-    
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
+
 .post > h3 {
+    order: 1;
+    flex: 85%; 
+    margin: 0 0;
+    padding: 0 1vw 0 0;
+    font-family: 'Eczar', Arial, Helvetica, sans-serif;
+}
+.spec {
+    order: 2;
+    flex: 30%;
+    flex-grow: 1;
+    margin: 2vw 0 0 0;
+    justify-content: space-evenly;
+}
+.spec > h2 {
+    order: 3;
+    align-self: flex-end;
     margin: 0 0;
     padding: 0 1vw;
-    flex: 1;
 }
-
-.post > h1{
-    flex: 1;
-    font-family: 'Vollkorn SC', serif;
-    color: rosybrown;
+.spec > p {
+    order: 4;
+    align-self: center;
+    margin: 0 0;
+    padding: 0 1vw;
 }
-
 .post > img {
-    
-    float: right;
-    flex: 1;
-    height: 150px;
+    order: 5;
+    flex: 50%;
+    float: left;
     width: 150px;
     border-radius: 0 50% 0 0;
+    align-self: flex-end;
+    flex-grow: 2;
   }
+
+
 
 #content > span {
     width: 507px;
@@ -267,8 +292,19 @@ span {
         height: 100vh;
         display: flex;
     }
+    .flex{
+        display: list-item;
+        list-style-type: none;
+        width: 2vw;
+        margin: auto 0 0 0;
+       }
    .sites {
-            margin-left: auto;
+            list-style-type: none;
+            align-content: center;
+            width: 100px; 
+            height: 100px; 
+            margin: 0 0 0 0;
+            justify-content: flex-end;
     }
     #navigation > ul {
         flex-direction: column;

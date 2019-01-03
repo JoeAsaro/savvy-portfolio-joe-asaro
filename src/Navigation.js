@@ -25,6 +25,9 @@ export default function Navagation(state){
             <li>🐀🐁🐀🐐</li>
             <li>⛓⛓⛓⛓⛓</li>
         </ul>
+        <div class="flex">
+            <img src="https://media.giphy.com/media/26DN1VXcyRxmIin60/giphy.gif" width="100px">
+        </div>
        <ul class="sites">
         <li><a href="https://www.instagram.com/joeyfromamerica"><i class="fab fa-instagram"></i>Instagram</a></li>
         <li><a href="https://github.com/joeasaro"><i class="fab fa-github-alt"></i>GitHub</a></li>

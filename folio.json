@@ -1,0 +1,94 @@
+{
+    "art": [
+    {
+      "id": 1,
+      "title": "Labyrinth : trapped",
+      "imgUrl": "https://i.imgur.com/ElViEMg.jpg",
+      "pngUrl": "https://vgy.me/CNHK6V.png",
+      "videoLink": "https://vimeo.com/267445314",
+      "year": 2018,
+      "medium": "Pallet Lumber/ 5.5in Cathode ray tubes"
+    },
+    {
+      "id": 2,
+      "title": "Labyrinth : epiphany",
+      "imgUrl": "https://i.imgur.com/4F6UBzQ.jpg",
+      "pngUrl": "https://vgy.me/lBwGy1.png",
+      "videoLink": "https://vimeo.com/267446705",
+      "year": 2018,
+      "medium": "Cardboard/ Gold leaf/ Deconstructed Laptop"
+    },
+    {
+      "id": 3,
+      "title": "Labyrinth : navigate",
+      "imgUrl": "https://i.imgur.com/WqdzNiB.jpg",
+      "pngUrl": "https://vgy.me/xzKNlB.png",
+      "videoLink": "https://vimeo.com/267478478",
+      "year": 2018,
+      "medium": "Multi-Channel Video Installation"
+    },
+    {
+    "id": 4,
+    "title": "Labyrinth : minotaur",
+    "imgUrl": "https://i.imgur.com/J6cb8yc.jpg",
+    "pngUrl": "https://vgy.me/4fAPjY.png",
+    "videoLink": "https://vimeo.com/user40899375",
+    "year": 2018,
+    "medium": "Photograph/ Self portrait"
+    },
+    {
+    "id": 5,
+    "title": "Labyrinth : minotaur",
+    "imgUrl": "https://i.imgur.com/ElViEMg.jpg",
+    "pngUrl": "https://vgy.me/CNHK6V.png",
+    "videoLink": "https://vimeo.com/user40899375",
+    "year": 2018,
+    "medium": "Cardboard/ Gold leaf/ Deconstructed Laptop"
+    },
+    {
+    "id": 6,
+    "title": "Labyrinth : navigate",
+      "imgUrl": "https://i.imgur.com/WqdzNiB.jpg",
+      "pngUrl": "https://vgy.me/xzKNlB.png",
+      "videoLink": "https://vimeo.com/267478478",
+      "year": 2018,
+      "medium": "Multi-Channel Video Installation"
+    },
+    {
+    "id": 7,
+    "title": "Labyrinth : minotaur",
+    "imgUrl": "https://i.imgur.com/J6cb8yc.jpg",
+    "pngUrl": "https://vgy.me/4fAPjY.png",
+    "videoLink": "https://vimeo.com/user40899375",
+    "year": 2018,
+    "medium": "Photograph/ Self portrait"
+     } ,
+    {
+    "id": 8,
+    "title": "ericia porro iure quia iusto quoluptate ea odit beatae",
+    "imgUrl": "https://i.imgur.com/ElViEMg.jpg",
+    "pngUrl": "https://vgy.me/CNHK6V.png",
+    "videoLink": "https://vimeo.com/267446705",
+    "year": 2018,
+    "medium": "Caricia porro iurenstructed Laptop"
+    } ,
+    {
+    "id": 5000,
+    "title": "error quasi sunt cupiditate voluptate ea odit beatae",
+    "imgUrl": "https://i.imgur.com/ElViEMg.jpg",
+    "pngUrl": "https://vgy.me/CNHK6V.png",
+    "videoLink": "https://vimeo.com/267446705",
+    "year": 2018,
+    "medium": "Cardboard/ Gold leaf/ Deconstructed Laptop"
+    } 
+  ],
+  "code": [
+      {
+        "id": 1,
+        "title": "error quasi sunt cupiditate voluptate ea odit beatae",
+        "link": "foo",
+        "year": 2018,
+        "medium": "foo"
+      }
+  ]
+}

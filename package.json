@@ -8,20 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Melkortheslumpgod/savvy-portfolio-joe-asaro.git"
+    "url": "git+https://github.com/JoeAsaro/savvy-portfolio-joe-asaro.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Melkortheslumpgod/savvy-portfolio-joe-asaro/issues"
+    "url": "https://github.com/JoeAsaro/savvy-portfolio-joe-asaro/issues"
   },
-  "homepage": "https://github.com/Melkortheslumpgod/savvy-portfolio-joe-asaro#readme",
+  "homepage": "https://github.com/JoeAsaro/savvy-portfolio-joe-asaro#readme",
   "devDependencies": {
     "eslint": "^5.8.0",
     "parcel-bundler": "^1.10.3"
   },
   "dependencies": {
+    "json-server": "^0.14.2",
     "lodash": "^4.17.11",
     "navigo": "^7.1.2"
   }

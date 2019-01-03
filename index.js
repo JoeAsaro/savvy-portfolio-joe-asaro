@@ -75,10 +75,10 @@ router
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .resolve();
 
-fetch('https://jsonplaceholder.typicode.com/albums/1/photos')
+fetch('http://localhost:3004/art')
     .then((response) => response.json())
-    .then((photos) => {
-        State.posts = photos;
+    .then((art) => {
+        State.posts = art;
 
         render(State);
     });

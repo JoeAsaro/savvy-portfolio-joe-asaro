@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "json-server": "^0.14.2",
+    "lit-html": "^0.14.0",
     "lodash": "^4.17.11",
     "navigo": "^7.1.2"
   }

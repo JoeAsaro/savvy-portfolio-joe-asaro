@@ -1,4 +1,5 @@
 import { capitalize } from 'lodash';
+import { html } from 'lit-html';
 function buildLink(link){
     var href = '';
     
@@ -6,7 +7,7 @@ function buildLink(link){
         href = link;
     }
 
-    return `    
+    return html`    
           <li>
             <a href="/${href}" data-navigo>
              ${capitalize(link)}
@@ -16,17 +17,17 @@ function buildLink(link){
 }
 
 export default function Navagation(state){
-    return `
+    return html`
      <div id="navigation">
         <ul class="container">
-            ${state[state.active].links.map(buildLink).join('')}
+            ${state[state.active].links.map(buildLink)}
         <ul class="dropdown">
             <li>⛓⛓⛓⛓</li>
             <li>🐀🐁🐀🐐</li>
             <li>⛓⛓⛓⛓⛓</li>
         </ul>
         <div class="flex">
-            <img src="https://media.giphy.com/media/26DN1VXcyRxmIin60/giphy.gif" width="100px">
+            <img src="https://vgy.me/17fHhY.png" width="100px">
         </div>
        <ul class="sites">
         <li><a href="https://www.instagram.com/joeyfromamerica"><i class="fab fa-instagram"></i>Instagram</a></li>

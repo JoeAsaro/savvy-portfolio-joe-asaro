@@ -4,6 +4,9 @@ import greet from './src/Greeting';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
 import Navigo from 'navigo';
+import Store from './src/Store';
+import { html, render } from 'lit-html';
+
 
 var router = new Navigo(window.location.origin);
 var root = document.querySelector('#root');
@@ -29,57 +32,57 @@ var State = {
     }
 };
 
-class Store{
-    constructor(state){
-        this.listener = () => {};
-        this.state = state;
-    }
+var store = new Store(State);
 
-    dispach(reducer){
-        this.state = reducer(this.state);
-        
-        this.listener(this.state);
-        render(this.state); // eslint-disable-line
-    }
-    addListener(listener){
-        this.listener = listener;
-    }
-}
-
-var store = new Store(State); // eslint-disable-line
 
 function handleNavigation(params){
-    store.dispach((state) => {
+    store.dispatch((state) => {
         state.active = params.page;
-
+    
         return state;
     });
-    render(State); // eslint-disable-line
 }
-    
-function render(state){
-    root.innerHTML = `
-${Navigation(state)}
-${Header(state)}
-${Content(state)}
-${Footer(state)}
-`;
 
-    greet();
-
-    router.updatePageLinks();
+function App(state){
+    return html`
+        ${Navigation(state)}
+        ${Header(state)}
+        ${Content(state)}
+        ${Footer(state)}
+    `;
 }
+
+function start(state){
+    render(App(state), root);
+}
+
+store.addListener(start);
+store.addListener(() => router.updatePageLinks());
+
+// function render(state){
+//     root.innerHTML = `
+//         ${Navigation(state)}
+//         ${Header(state)}
+//         ${Content(state)}
+//         ${Footer(state)}
+// `;
+
+//     greet();
+
+//     router.updatePageLinks();
+// }
 
 router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .resolve();
 
-fetch('http://localhost:3004/art')
+router.updatePageLinks();
+
+fetch('http://68.183.113.11/art')
     .then((response) => response.json())
-    .then((art) => {
-        State.posts = art;
+    .then((art) => store.dispatch((state) => {
+        state.posts = art;
 
-        render(State);
-    });
-
+        return state;
+    }));

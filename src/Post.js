@@ -1,5 +1,6 @@
+import { html } from 'lit-html';
 export default function Post(post){
-    return `
+    return html`
     <div class="post">
     <h3>${post.title}</h3> 
     <div class="spec">

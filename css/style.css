@@ -217,7 +217,6 @@ a:active {
     flex: 50%;
     float: left;
     width: 150px;
-    border-radius: 0 50% 0 0;
     align-self: flex-end;
     flex-grow: 2;
   }

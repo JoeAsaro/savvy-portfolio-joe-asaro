@@ -79,7 +79,7 @@ router
 
 router.updatePageLinks();
 
-fetch('http://68.183.113.11/art')
+fetch('https://68.183.113.11/art')
     .then((response) => response.json())
     .then((art) => store.dispatch((state) => {
         state.posts = art;

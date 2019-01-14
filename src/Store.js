@@ -3,16 +3,18 @@ class Store{
     constructor(state){
         this.listeners = [];
         this.state = state;
-    }
+        this.activPost = []
+    }  
 
     dispatch(reducer){
         this.state = reducer(this.state);
-    
         this.listeners.forEach(
             (listener) => listener(this.state)
+       
         );
     }
     addListener(listener){
+        console.log('listener added')
         this.listeners.push(listener);
     }
 }

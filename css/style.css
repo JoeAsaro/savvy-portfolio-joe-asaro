@@ -221,7 +221,21 @@ a:active {
     flex-grow: 2;
   }
 
+#post-modal {
+    display: none;
+    background-color: grey;
+    z-index: 6;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left:0;
 
+}
+
+.visable {
+    display: block!important;
+}
 
 #content > span {
     width: 507px;

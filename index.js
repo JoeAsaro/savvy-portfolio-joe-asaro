@@ -1,6 +1,5 @@
 import Content from './src/Content';
 import Footer from './src/Footer';
-import greet from './src/Greeting';
 import Header from './src/Header';
 import Navigation from './src/Navigation';
 import Navigo from 'navigo';
@@ -38,7 +37,7 @@ var store = new Store(State);
 function handleNavigation(params){
     store.dispatch((state) => {
         state.active = params.page;
-    
+        
         return state;
     });
 }
@@ -59,22 +58,11 @@ function start(state){
 store.addListener(start);
 store.addListener(() => router.updatePageLinks());
 
-// function render(state){
-//     root.innerHTML = `
-//         ${Navigation(state)}
-//         ${Header(state)}
-//         ${Content(state)}
-//         ${Footer(state)}
-// `;
-
-//     greet();
-
-//     router.updatePageLinks();
-// }
 
 router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
+    .on('/blog', () => handleNavigation({ 'page': 'blog' }))
     .resolve();
 
 router.updatePageLinks();
@@ -86,3 +74,6 @@ fetch('https://api.myjson.com/bins/adi9c')
 
         return state;
     }));
+
+
+

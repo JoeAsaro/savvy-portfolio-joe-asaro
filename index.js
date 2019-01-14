@@ -63,6 +63,7 @@ router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .on('/blog', () => handleNavigation({ 'page': 'blog' }))
+    .on('/projects', () => handleNavigation({ 'page': 'projects' }))
     .resolve();
 
 router.updatePageLinks();

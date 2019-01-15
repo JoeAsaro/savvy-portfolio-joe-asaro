@@ -222,7 +222,7 @@ a:active {
   }
 
 #post-modal {
-    display: block;
+    display: none;
     background-color: grey;
     opacity: 0.75;
     z-index: 6;
@@ -231,8 +231,15 @@ a:active {
     position: absolute;
     top: 10vh;
     left: 10vw;
+    
+}
+.modal-img {
+    width: 300px;
 }
 
+.visible {
+    display: block!important;
+}
 
 #content > span {
     width: 507px;

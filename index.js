@@ -12,6 +12,9 @@ var root = document.querySelector('#root');
 
 var State = {
     'posts': [],
+    
+    'modalVisible': false,
+    'modalContent': null,
     'active': 'home',
     'home': {
         'title': 'hi' ,
@@ -30,8 +33,9 @@ var State = {
         'links': [ 'home', 'blog', 'contact' ]
     }
 };
-
 var store = new Store(State);
+
+State.store = store;
 
 
 function handleNavigation(params){
@@ -43,6 +47,7 @@ function handleNavigation(params){
 }
 
 function App(state){
+    console.log('from app', state)
     return html`
         ${Navigation(state)}
         ${Header(state)}
@@ -63,7 +68,6 @@ router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .on('/blog', () => handleNavigation({ 'page': 'blog' }))
-    .on('/projects', () => handleNavigation({ 'page': 'projects' }))
     .resolve();
 
 router.updatePageLinks();

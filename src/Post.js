@@ -1,17 +1,20 @@
 import { html } from 'lit-html';
-import Modal from './Modal';
+// import Store from './Store';
 
 
-export default function Post(post, posts){
-    function handleModal(e){
-        const modal = document.getElementById('post-modal');
-
-        console.log(modal);
-
-        const updatedModal = Modal(posts.find((p) => p.id === post.id)).getHTML();
-
-        modal.outerHTML = updatedModal;
-        modal.classList.add('visible');
+export default function Post(post, state){
+    function handleModal(){
+        
+        state.store.dispatch(() => {
+            const posts = state.posts;
+            const found = posts.find((p) => p.id === post.id);
+        
+            state.modalContent = found;
+            state.modalVisible = true;
+            console.log(state);
+            
+            return state;
+        });
     }
     
     return html`

@@ -3,7 +3,6 @@ class Store{
     constructor(state){
         this.listeners = [];
         this.state = state;
-        this.activPost = []
     }  
 
     dispatch(reducer){

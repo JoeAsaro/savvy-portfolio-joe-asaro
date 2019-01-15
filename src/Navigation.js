@@ -17,6 +17,7 @@ function buildLink(link){
 }
 
 export default function Navagation(state){
+    console.log('from nav', state)
     return html`
      <div id="navigation">
         <ul class="container">

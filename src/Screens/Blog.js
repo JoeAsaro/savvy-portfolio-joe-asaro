@@ -5,6 +5,5 @@ import { html } from 'lit-html';
 export default function Blog(state){
     return html`
         ${state.posts.map(post => Post(post, state))}
-        ${Modal(state)}
         `;
 }

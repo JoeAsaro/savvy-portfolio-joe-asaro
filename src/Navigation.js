@@ -30,11 +30,11 @@ export default function Navagation(state){
         <div class="flex">
             <img src="https://vgy.me/17fHhY.png" width="100px">
         </div>
-       <ul class="sites">
-        <li><a href="https://www.instagram.com/joeyfromamerica"><i class="fab fa-instagram"></i>Instagram</a></li>
-        <li><a href="https://github.com/joeasaro"><i class="fab fa-github-alt"></i>GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/joeasaro"><i class="fab fa-linkedin"></i>Linkedin</a></li>
-       </ul>
+       <div class="sites">
+        <a href="https://www.instagram.com/joeyfromamerica"><i class="fab fa-instagram"></i></a>  |
+        <a href="https://github.com/joeasaro"><i class="fab fa-github-alt"></i></a>   |
+        <a href="https://www.linkedin.com/in/joeasaro"><i class="fab fa-linkedin"></i></a>
+       </div>
     </li>
 </ul>
 </div>

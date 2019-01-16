@@ -5,6 +5,7 @@ import Navigation from './src/Navigation';
 import Navigo from 'navigo';
 import Store from './src/Store';
 import { html, render } from 'lit-html';
+import Modal from './src/Modal';
 
 
 var router = new Navigo(window.location.origin);
@@ -21,7 +22,7 @@ var State = {
         'links': [ 'blog', 'contact', 'projects' ]
     },
     'blog': {
-        'title': 'Hello' ,
+        'title': 'Art' ,
         'links': [ 'home', 'contact', 'projects' ]
     },
     'contact': {
@@ -47,13 +48,16 @@ function handleNavigation(params){
 }
 
 function App(state){
-    console.log('from app', state)
-    return html`
+    console.log('from app', state);
+    
+return html`
+        ${Modal(state)}
         ${Navigation(state)}
         ${Header(state)}
         ${Content(state)}
         ${Footer(state)}
     `;
+    
 }
 
 function start(state){
@@ -79,6 +83,5 @@ fetch('https://api.myjson.com/bins/adi9c')
 
         return state;
     }));
-
 
 

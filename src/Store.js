@@ -3,7 +3,7 @@ class Store{
     constructor(state){
         this.listeners = [];
         this.state = state;
-    }  
+    }
 
     dispatch(reducer){
         this.state = reducer(this.state);
@@ -13,7 +13,7 @@ class Store{
         );
     }
     addListener(listener){
-        console.log('listener added')
+        console.log('listener added');
         this.listeners.push(listener);
     }
 }

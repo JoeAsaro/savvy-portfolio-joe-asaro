@@ -270,10 +270,12 @@ a:active {
 .modal-img {
     
     height: 100%;
-    
+    padding: auto;
+    margin:auto;
 }
 .modal-img > img {
     align-items: center;
+    margin:auto;
 }
 
 .modal-content-meta {

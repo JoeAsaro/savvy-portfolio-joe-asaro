@@ -28,13 +28,14 @@ export default function Modal(state){
             <div class="modal-body">
                 <div class="modal-content">
                     <div class="modal-content-meta">
-                        <h3>${post ? post.title : null}</h3>
+                        <h1 class="brand">${post ? post.title : null}</h1>
                         <p>${post ? post.medium : null}</p>
                         <h2>${post ? post.year : null}</h2>
                     </div>
                     <div class="modal-content-description">
                         <p>My art is an exploration in technologies readily available to the artist at this moment.
                         Aggregating and collecting these artifacts of technology and repurposing them for art.
+
                         The juxtaposition of technology and rough construction materials, references an alchemy of
                         sorts. Transforming waste into a portal for new ideas. A portal that gives a glimpse into the
                         mind of the artist.</p>

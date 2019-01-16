@@ -49,9 +49,9 @@ ol {
     
     line-height: 85%;
 }
-.brand h1 {
-    letter-spacing: 0vw;/*
-    background:linear-gradient(to right, pink, rosybrown);*/
+.brand {
+    letter-spacing: -2px;
+    font-size: 2em;
 
 }
 

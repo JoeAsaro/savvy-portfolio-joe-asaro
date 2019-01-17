@@ -18,20 +18,20 @@ var State = {
     'modalContent': null,
     'active': 'home',
     'home': {
-        'title': 'hi' ,
-        'links': [ 'blog', 'contact', 'projects' ]
+        'title': 'JOEASARO.COM' ,
+        'links': [ 'art', 'contact', 'bio' ]
     },
-    'blog': {
-        'title': 'Art' ,
-        'links': [ 'home', 'contact', 'projects' ]
+    'art': {
+        'title': 'ART' ,
+        'links': [ 'home', 'contact', 'bio' ]
     },
     'contact': {
-        'title': 'How you doin',
-        'links': [ 'home', 'blog', 'projects' ]
+        'title': 'KEEP IN TOUCH',
+        'links': [ 'home', 'art', 'bio' ]
     },
-    'projects': {
-        'title': 'LOok at me' ,
-        'links': [ 'home', 'blog', 'contact' ]
+    'bio': {
+        'title': 'BIO' ,
+        'links': [ 'home', 'art', 'contact' ]
     }
 };
 var store = new Store(State);
@@ -71,7 +71,8 @@ store.addListener(() => router.updatePageLinks());
 router
     .on('/:page', handleNavigation)
     .on('/', () => handleNavigation({ 'page': 'home' }))
-    .on('/blog', () => handleNavigation({ 'page': 'blog' }))
+    .on('/art', () => handleNavigation({ 'page': 'art' }))
+    .on('/bio', () => handleNavigation({ 'page': 'bio' }))
     .resolve();
 
 router.updatePageLinks();

@@ -10,7 +10,7 @@ import Modal from './src/Modal';
 
 var router = new Navigo(window.location.origin);
 var root = document.querySelector('#root');
-// state object holds state of application 
+// state object holds state of application
 var State = {
     'posts': [],
     
@@ -50,14 +50,13 @@ function handleNavigation(params){
 function App(state){
     console.log('from app', state);
     
-return html`
+    return html`
         ${Modal(state)}
         ${Navigation(state)}
         ${Header(state)}
         ${Content(state)}
         ${Footer(state)}
     `;
-    
 }
 
 function start(state){
@@ -73,16 +72,17 @@ router
     .on('/', () => handleNavigation({ 'page': 'home' }))
     .on('/art', () => handleNavigation({ 'page': 'art' }))
     .on('/bio', () => handleNavigation({ 'page': 'bio' }))
+    .on('/contact', () => handleNavigation({ 'page': 'contact' }))
     .resolve();
 
 router.updatePageLinks();
 
 // pull blog post from api
-fetch('https://api.myjson.com/bins/17g224')
+fetch('https://api.myjson.com/bins/y1mf0')
     .then((response) => response.json())
-    .then((art) => store.dispatch((state) => {
-      // set blog post to state
-        state.posts = art;
+    .then((post) => store.dispatch((state) => {
+        // set art post to state
+        state.posts = post.art;
 
         return state;
     }));

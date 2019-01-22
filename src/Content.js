@@ -3,7 +3,7 @@ import { html } from 'lit-html';
 import * as Screens from './Screens';
 
 export default function Content(state){
-        return html`
+    return html`
         <div id="content">
             <div class="container ${state.active ? 'post-container' : ''}">
              ${Screens[capitalize(state.active)](state)}

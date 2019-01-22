@@ -10,7 +10,7 @@ import Modal from './src/Modal';
 
 var router = new Navigo(window.location.origin);
 var root = document.querySelector('#root');
-
+// state object holds state of application 
 var State = {
     'posts': [],
     
@@ -77,9 +77,11 @@ router
 
 router.updatePageLinks();
 
-fetch('https://api.myjson.com/bins/adi9c')
+// pull blog post from api
+fetch('https://api.myjson.com/bins/17g224')
     .then((response) => response.json())
     .then((art) => store.dispatch((state) => {
+      // set blog post to state
         state.posts = art;
 
         return state;

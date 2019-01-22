@@ -15,19 +15,14 @@ function buildLink(link){
           </li>
         `;
 }
-
+//handleNav updates the active page to the 
 export default function Navagation(state){
     console.log('from nav', state)
     return html`
      <div id="navigation">
         <ul class="container">
             ${state[state.active].links.map(buildLink)}
-        <ul class="dropdown">
-            <li>⛓⛓⛓⛓</li>
-            <li>🐀🐁🐀🐐</li>
-            <li>⛓⛓⛓⛓⛓</li>
-        </ul>
-        <div class="flex">
+        <div class="flag">
             <img src="https://vgy.me/17fHhY.png" width="100px">
         </div>
        <div class="sites">

@@ -1,8 +1,10 @@
 import { html } from 'lit-html';
-// import Store from './Store';
 
 
 export default function Post(post, state){
+    // handleModal is the event handler for post when a post is clicked we set the found post to state
+    // then call dispatch to re-render application as is required by lit-html.
+    // modal is not visable by default a click will set the visability state of modal to true.
     function handleModal(){
         
         state.store.dispatch(() => {
@@ -16,7 +18,7 @@ export default function Post(post, state){
             return state;
         });
     }
-    
+    // takes a single post and map to the display with template literals
     return html`
     <div class="post" value="${post.id}" @click=${handleModal}>
     <h3>${post.title}</h3> 

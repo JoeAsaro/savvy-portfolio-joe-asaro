@@ -15,7 +15,7 @@ export default function Home(){
                 </div>
             </div>
             <div class="home-img-wrapper">
-                <img class="home-img" src="https://imgur.com/a/tnuTtsA"/>
+                <img class="home-img" src="https://i.imgur.com/y77u0Mn.png"/>
             </div>
         </div>
     </div>

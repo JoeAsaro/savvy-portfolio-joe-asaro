@@ -77,7 +77,7 @@ router
 
 router.updatePageLinks();
 
-// pull blog post from api
+// pull art post from api
 fetch('https://api.myjson.com/bins/y1mf0')
     .then((response) => response.json())
     .then((post) => store.dispatch((state) => {
